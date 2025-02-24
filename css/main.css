@@ -45,6 +45,7 @@ body {
 
 .cards {
     margin: 7.5rem 8% 0;
+    max-width: 375px;
 
     /* Ejercicio 0: Crea una regla usando max-width adecuadamente para que todas las tarjetas no crezcan más de 375px de ancho */
 }

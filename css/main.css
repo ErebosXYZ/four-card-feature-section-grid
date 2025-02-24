@@ -121,7 +121,34 @@ body {
     /** Ejercicio 1. Muestra las tarjetas en 2 columnas y 2 filas usando Grid.   */
     .cards {
         display: grid;
+        grid-template-columns: repeat(2, 375px);
+        gap: 4rem;
     }
 }
 
 /** Ejercicio 2: Crea una nueva media query para que, cuando lleguemos como mínimo 1200px de viewport width, apliquemos cambiemos el grid a .card {} , con todas las propiedades necesarias para que se vea como en diseño final. Además, haz que todos los elementos del grid esten en el centro del cross axis  */
+@media (min-width: 1200px) {
+    .cards {
+        grid-template-columns: repeat(3, 375px);
+        grid-template-rows: repeat(2 , auto);
+        grid-template-areas: "start mid1 end"
+        "start mid2 end";
+    }
+
+    .card-supervisor {
+        grid-area: start;
+        align-self: center;
+    }
+    .card-team-builder {
+        grid-area: mid1;
+    }
+
+    .card-karma {
+        grid-area: mid2;
+        
+    }
+    .card-calculator {
+        grid-area: end;
+        align-self: center;
+    }
+}
